@@ -125,7 +125,7 @@ legend('phytoplankton','nutrients','','','','','','','','','','')
 %% Seasonality
 % Run model WITH seasonal forcing
 tic
-[t, y] = ode45(@PmodelDerivNPSeason, [0,800], [P0,N0], options, param);
+[t, y] = ode45(@PmodelDerivNPSeason, [0,2000], [P0,N0], options, param);
 toc
 P = y(:,1:param.n); 
 N = y(:,param.n+1:end);
